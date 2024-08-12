@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+$header-height: 57px;
+$input-search-height: 28px;
+$input-search-height-mobile: 32px;
+$input-search-width: 530.17px;
+$shadow-color: rgba(149, 149, 149, 0.25);
+$font-inter: 'Inter', sans-serif;
+$font-size-small: 14px;
+$font-size-smaller: 12px;
+$font-weight-normal: 400;
+$header-background: #FFFFFF;
+$text-color: #455A64;
+$border-color: #D9D9D9;
+$search-icon-color: #888;
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: $header-height;
+  background: $header-background;
+  box-shadow: 0px 1px 7px $shadow-color;
+}
+
+.btn-close {
+  transform: translateX(-2rem);
+  cursor: pointer;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+  margin-left: 4rem;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo-text {
+  font-size: $font-size-small;
+  font-family: $font-inter;
+  color: $text-color;
+  line-height: 16.94px;
+  font-weight: $font-weight-normal;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  padding-right: 30px;
+  width: $input-search-width;
+  height: $input-search-height;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  text-indent: 10px;
+  font-family: $font-inter;
+  font-size: 9px;
+  font-weight: $font-weight-normal;
+  line-height: 10.89px;
+
+  &::placeholder {
+    font-family: $font-inter;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  color: $search-icon-color;
+}
+
+@media (max-width: 600px) {
+  .container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .header-info {
+    gap: 1rem;
+    margin-left: 0;
+  }
+
+  .header-logo {
+    gap: 10px;
+  }
+
+  .header-logo-text {
+    font-size: $font-size-smaller;
+  }
+
+  .input-search {
+    width: 100%;
+    height: $input-search-height-mobile;
+    font-size: $font-size-smaller;
+  }
+
+  .search-icon {
+    right: 8px;
+  }
+
+  .btn-close {
+    transform: none;
+  }
+
+  .logo-header {
+    width: 32.31px;
+    height: 32.31px;
+    margin-left: 10px;
+  }
+}
